@@ -1,0 +1,54 @@
+:root {
+  --primary-color: #2b6cb0;
+  --success-color: #38a169;
+  --danger-color: #e53e3e;
+  --bg-color: #f7fafc;
+  --text-color: #2d3748;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+}
+h1 { color: var(--primary-color); }
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 20px;
+}
+button:hover { background-color: #1a528d; }
+.options-container { text-align: left; margin: 20px 0; }
+.option-card {
+  background: #edf2f7;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+.option-card:hover { background: #e2e8f0; }
+.option-card.selected { border-color: var(--primary-color); background: #ebf8ff; }
+.correct { background-color: #c6f6d5 !important; border-color: var(--success-color); }
+.incorrect { background-color: #fed7d7 !important; border-color: var(--danger-color); }
