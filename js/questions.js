@@ -78,7 +78,7 @@ const quizQuestions = [
     options: ["had the inspector entered", "the inspector entered", "did the inspector entered", "has the inspector entered"],
     correctAnswerHash: "MA==", // Зашифрованный индекс 0
     explanation: "Правильный ответ: 'had the inspector entered'. Конструкция 'No sooner ... than' требует использования инверсии и времени Past Perfect в первой части предложения."
-  } , 
+  }, 
     {
     id: 11,
     category: "methodology",
