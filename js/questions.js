@@ -78,5 +78,88 @@ const quizQuestions = [
     options: ["had the inspector entered", "the inspector entered", "did the inspector entered", "has the inspector entered"],
     correctAnswerHash: "MA==", // Зашифрованный индекс 0
     explanation: "Правильный ответ: 'had the inspector entered'. Конструкция 'No sooner ... than' требует использования инверсии и времени Past Perfect в первой части предложения."
+  } , 
+    {
+    id: 11,
+    category: "methodology",
+    section: "Pedagogy",
+    question: "According to Bloom's Taxonomy, which action verb is associated with the highest level of cognitive thinking skills?",
+    options: ["Identify", "Analyze", "Create", "Summarize"],
+    correctAnswerHash: "Mg==", // Зашифрованный индекс 2 (Create)
+    explanation: "Правильный ответ: 'Create' (Создание). В обновленной таксономии Блума уровень 'Create' является наивысшей ступенью когнитивных навыков (навыки высокого порядка / HOTS), в то время как 'Identify' — самым базовым."
+  },
+  {
+    id: 12,
+    category: "methodology",
+    section: "Assessment",
+    question: "In the context of the updated educational curriculum in Kazakhstan, 'descriptors' are primarily used to:",
+    options: [
+      "Compare students' total marks with national statistical averages.",
+      "Provide specific, step-by-step criteria for measuring a student's performance in formative and summative tasks.",
+      "Select advanced students for republican olympiads.",
+      "Punish students for minor academic behavioral disruptions."
+    ],
+    correctAnswerHash: "MQ==", // Зашифрованный индекс 1
+    explanation: "Правильный ответ: 'Provide specific, step-by-step criteria...'. Дескрипторы в критериальном оценивании РК описывают конкретные шаги выполнения задания, помогая объективно выставить баллы за СОР или СОЧ."
+  },
+  {
+    id: 13,
+    category: "methodology",
+    section: "CLIL",
+    question: "What does the 'Dual-focused' nature of Content and Language Integrated Learning (CLIL) imply?",
+    options: [
+      "Teaching two foreign languages simultaneously in the same classroom.",
+      "Equal emphasis on learning the subject content and the target modern language.",
+      "Focusing on both reading comprehension and listening skills equally.",
+      "Separating native tongue instruction from grammar drilling sessions."
+    ],
+    correctAnswerHash: "MQ==", // Зашифрованный индекс 1
+    explanation: "Правильный ответ: 'Equal emphasis on learning the subject content and the target language'. Метод CLIL подразумевает одновременное изучение неязыкового предмета (например, биологии или истории) и иностранного языка."
+  },
+  {
+    id: 14,
+    category: "subject",
+    section: "Vocabulary",
+    question: "Choose the correct word to complete the idiom: 'The newly appointed director decided to clear the ________ and start the project from scratch.'",
+    options: ["air", "decks", "table", "ground"],
+    correctAnswerHash: "MQ==", // Зашифрованный индекс 1 (decks)
+    explanation: "Правильный ответ: 'decks'. Идиома 'clear the decks' означает 'подготовиться к решительным действиям, убрать все лишнее перед началом важной работы'."
+  },
+  {
+    id: 15,
+    category: "subject",
+    section: "Grammar",
+    question: "Identify the sentence that uses a causative structure correctly:",
+    options: [
+      "The English teacher made the students to write an essay.",
+      "The English teacher had the students write an essay.",
+      "The English teacher got the students write an essay.",
+      "The English teacher made the students written an essay."
+    ],
+    correctAnswerHash: "MQ==", // Зашифрованный индекс 1
+    explanation: "Правильный ответ: 'The English teacher had the students write an essay.' В каузативной форме с глаголом 'have' используется голый инфинитив (Bare Infinitive). С глаголом 'make' частица 'to' также не ставится, поэтому первый вариант неверен."
+  },
+  {
+    id: 16,
+    category: "methodology",
+    section: "Classroom Management",
+    question: "Which strategy is most effective for promoting inclusivity in a mixed-ability English language classroom?",
+    options: [
+      "Focusing questions exclusively on high-achieving students to keep the lesson pace fast.",
+      "Providing tiered (differentiated) tasks that accommodate different readiness levels.",
+      "Grouping all lower-achieving students together for the entire academic year.",
+      "Using the exact same complex instructional materials for every student without changes."
+    ],
+    correctAnswerHash: "MQ==", // Зашифрованный индекс 1
+    explanation: "Правильный ответ: 'Providing tiered (differentiated) tasks...'. Дифференциация (differentiation) — ключевое требование инклюзивности. Задания разного уровня сложности позволяют вовлечь всех учащихся."
+  },
+  {
+    id: 17,
+    category: "subject",
+    section: "Grammar",
+    question: "If it ________ for your timely advice last week, I would not be working as a senior lecturer today.",
+    options: ["weren't", "hadn't been", "hasn't been", "isn't"],
+    correctAnswerHash: "MQ==", // Зашифрованный индекс 1
+    explanation: "Правильный ответ: 'hadn't been'. Это смешанный тип условного предложения (Mixed Conditional). Условие относится к ПРОШЛОМУ (last week — Past Perfect), а следствие — к НАСТОЯЩЕМУ (today — would + verb)."
   }
-];
+№]; 
