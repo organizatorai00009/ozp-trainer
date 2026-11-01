@@ -2,18 +2,29 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Тестирование ОЗП</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тренажер ОЗП — Тестирование</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <div id="quiz-box">
-      <h3 id="question-category" style="color: gray;"></h3>
-      <h2 id="question-text">Загрузка вопроса...</h2>
-      <div id="options-box" class="options-container"></div>
-      <button id="next-btn" onclick="submitAnswer()">Проверить результат</button>
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <h2>Вопрос <span id="current-question-num">0</span> из <span id="total-questions">0</span></h2>
     </div>
+    
+    <!-- Текст вопроса -->
+    <div class="question-box">
+      <h3 id="question">Загрузка вопроса...</h3>
+    </div>
+    
+    <!-- Контейнер для вариантов ответов (кнопок) -->
+    <div id="options-container" class="options-grid"></div>
+    
+    <!-- Кнопка перехода к следующему вопросу -->
+    <button id="next-btn" class="btn" style="display: none;">Следующий вопрос</button>
   </div>
+
+  <!-- Подключаем файлы скриптов строго в этом порядке -->
   <script src="js/questions.js"></script>
   <script src="js/quiz.js"></script>
 </body>
