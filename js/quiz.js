@@ -25,51 +25,60 @@ function loadQuestion() {
   if (currentQuestionNumElement) currentQuestionNumElement.textContent = currentQuestionIndex + 1;
   if (totalQuestionsElement) totalQuestionsElement.textContent = currentQuizQuestions.length;
   
-  questionElement.textContent = currentQuestion.question;
-  optionsContainer.innerHTML = "";
+  // ЗАЩИТА: проверяем, существует ли блок для текста вопроса на странице
+  if (questionElement) {
+    questionElement.textContent = currentQuestion.question;
+  } else {
+    console.error("Ошибка: На странице HTML отсутствует элемент с id='question'!");
+  }
+  
+  if (optionsContainer) {
+    optionsContainer.innerHTML = "";
+    currentQuestion.options.forEach((option, index) => {
+      const button = document.createElement("button");
+      button.textContent = option;
+      button.classList.add("option-btn");
+      button.addEventListener("click", () => selectOption(index, button));
+      optionsContainer.appendChild(button);
+    });
+  }
 
-  currentQuestion.options.forEach((option, index) => {
-    const button = document.createElement("button");
-    button.textContent = option;
-    button.classList.add("option-btn");
-    button.addEventListener("click", () => selectOption(index, button));
-    optionsContainer.appendChild(button);
-  });
-
-  nextButton.style.display = "none";
+  if (nextButton) nextButton.style.display = "none";
 }
 
 function selectOption(selectedIndex, selectedButton) {
-  const oldSelected = optionsContainer.querySelector(".option-btn.selected");
+  const oldSelected = optionsContainer ? optionsContainer.querySelector(".option-btn.selected") : null;
   if (oldSelected) {
     oldSelected.classList.remove("selected");
   }
 
   selectedButton.classList.add("selected");
   userAnswers[currentQuestionIndex] = selectedIndex;
-  nextButton.style.display = "block";
+  if (nextButton) nextButton.style.display = "block";
 }
 
-nextButton.addEventListener("click", () => {
-  const currentQuestion = currentQuizQuestions[currentQuestionIndex];
-  const selectedIndex = userAnswers[currentQuestionIndex];
-  const correctAnswerIndex = parseInt(atob(currentQuestion.correctAnswerHash), 10);
+if (nextButton) {
+  nextButton.addEventListener("click", () => {
+    const currentQuestion = currentQuizQuestions[currentQuestionIndex];
+    const selectedIndex = userAnswers[currentQuestionIndex];
+    const correctAnswerIndex = parseInt(atob(currentQuestion.correctAnswerHash), 10);
 
-  if (selectedIndex === correctAnswerIndex) {
-    score++;
-  }
+    if (selectedIndex === correctAnswerIndex) {
+      score++;
+    }
 
-  currentQuestionIndex++;
+    currentQuestionIndex++;
 
-  if (currentQuestionIndex < currentQuizQuestions.length) {
-    loadQuestion();
-  } else {
-    localStorage.setItem("quizScore", score);
-    localStorage.setItem("totalQuestions", currentQuizQuestions.length);
-    localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
-    localStorage.setItem("quizQuestionsRun", JSON.stringify(currentQuizQuestions));
-    window.location.href = "results.html";
-  }
-});
+    if (currentQuestionIndex < currentQuizQuestions.length) {
+      loadQuestion();
+    } else {
+      localStorage.setItem("quizScore", score);
+      localStorage.setItem("totalQuestions", currentQuizQuestions.length);
+      localStorage.setItem("userAnswers", JSON.stringify(userAnswers));
+      localStorage.setItem("quizQuestionsRun", JSON.stringify(currentQuizQuestions));
+      window.location.href = "results.html";
+    }
+  });
+}
 
 loadQuestion();
