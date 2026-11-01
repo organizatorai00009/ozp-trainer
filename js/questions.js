@@ -45,7 +45,7 @@ const quizQuestions = [
     question: "The headmaster suggested that the grading criteria ________ reviewed immediately.",
     options: ["is", "was", "be", "are"],
     correctAnswerHash: "Mg==", // Зашифрованный индекс 2
-    explanation: "Правильный ответ: 'be'. После глаголов рекомендации и требования (suggest, insist, recommend, demand) в придаточном предложении используется Present Subjunctive (сослагательное наклонение), где глагол 'to be' всегда пишется как 'be' независимо от лица."
+    explanation: "Правильный ответ: 'be'. После глаголов рекомендации и требования (suggest, insist, recommend, demand) в придаточном предложении используется Present Subjunctive (сослагательное наклонение), где глагол 'to be' always пишется как 'be' независимо от лица."
   },
   {
     id: 7,
@@ -79,13 +79,13 @@ const quizQuestions = [
     correctAnswerHash: "MA==", // Зашифрованный индекс 0
     explanation: "Правильный ответ: 'had the inspector entered'. Конструкция 'No sooner ... than' требует использования инверсии и времени Past Perfect в первой части предложения."
   }, 
-    {
+  {
     id: 11,
     category: "methodology",
     section: "Pedagogy",
     question: "According to Bloom's Taxonomy, which action verb is associated with the highest level of cognitive thinking skills?",
     options: ["Identify", "Analyze", "Create", "Summarize"],
-    correctAnswerHash: "Mg==", // Зашифрованный индекс 2 (Create)
+    correctAnswerHash: "Mg==",
     explanation: "Правильный ответ: 'Create' (Создание). В обновленной таксономии Блума уровень 'Create' является наивысшей ступенью когнитивных навыков (навыки высокого порядка / HOTS), в то время как 'Identify' — самым базовым."
   },
   {
@@ -99,7 +99,7 @@ const quizQuestions = [
       "Select advanced students for republican olympiads.",
       "Punish students for minor academic behavioral disruptions."
     ],
-    correctAnswerHash: "MQ==", // Зашифрованный индекс 1
+    correctAnswerHash: "MQ==",
     explanation: "Правильный ответ: 'Provide specific, step-by-step criteria...'. Дескрипторы в критериальном оценивании РК описывают конкретные шаги выполнения задания, помогая объективно выставить баллы за СОР или СОЧ."
   },
   {
@@ -113,7 +113,7 @@ const quizQuestions = [
       "Focusing on both reading comprehension and listening skills equally.",
       "Separating native tongue instruction from grammar drilling sessions."
     ],
-    correctAnswerHash: "MQ==", // Зашифрованный индекс 1
+    correctAnswerHash: "MQ==",
     explanation: "Правильный ответ: 'Equal emphasis on learning the subject content and the target language'. Метод CLIL подразумевает одновременное изучение неязыкового предмета (например, биологии или истории) и иностранного языка."
   },
   {
@@ -122,7 +122,7 @@ const quizQuestions = [
     section: "Vocabulary",
     question: "Choose the correct word to complete the idiom: 'The newly appointed director decided to clear the ________ and start the project from scratch.'",
     options: ["air", "decks", "table", "ground"],
-    correctAnswerHash: "MQ==", // Зашифрованный индекс 1 (decks)
+    correctAnswerHash: "MQ==",
     explanation: "Правильный ответ: 'decks'. Идиома 'clear the decks' означает 'подготовиться к решительным действиям, убрать все лишнее перед началом важной работы'."
   },
   {
@@ -136,7 +136,7 @@ const quizQuestions = [
       "The English teacher got the students write an essay.",
       "The English teacher made the students written an essay."
     ],
-    correctAnswerHash: "MQ==", // Зашифрованный индекс 1
+    correctAnswerHash: "MQ==",
     explanation: "Правильный ответ: 'The English teacher had the students write an essay.' В каузативной форме с глаголом 'have' используется голый инфинитив (Bare Infinitive). С глаголом 'make' частица 'to' также не ставится, поэтому первый вариант неверен."
   },
   {
@@ -150,7 +150,7 @@ const quizQuestions = [
       "Grouping all lower-achieving students together for the entire academic year.",
       "Using the exact same complex instructional materials for every student without changes."
     ],
-    correctAnswerHash: "MQ==", // Зашифрованный индекс 1
+    correctAnswerHash: "MQ==",
     explanation: "Правильный ответ: 'Providing tiered (differentiated) tasks...'. Дифференциация (differentiation) — ключевое требование инклюзивности. Задания разного уровня сложности позволяют вовлечь всех учащихся."
   },
   {
@@ -159,7 +159,4 @@ const quizQuestions = [
     section: "Grammar",
     question: "If it ________ for your timely advice last week, I would not be working as a senior lecturer today.",
     options: ["weren't", "hadn't been", "hasn't been", "isn't"],
-    correctAnswerHash: "MQ==", // Зашифрованный индекс 1
-    explanation: "Правильный ответ: 'hadn't been'. Это смешанный тип условного предложения (Mixed Conditional). Условие относится к ПРОШЛОМУ (last week — Past Perfect), а следствие — к НАСТОЯЩЕМУ (today — would + verb)."
-  }
-№]; 
+    correctAnswerHash: "MQ==",
